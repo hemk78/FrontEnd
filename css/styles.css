@@ -1,0 +1,348 @@
+/* variables */
+/*layout width*/
+/* variables */
+/* mixins */
+/*device width*/
+/* mixins */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Arial;
+  background-color: #f2f2f2;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mainwrapper {
+  color: #000;
+  max-width: 1120px;
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.mainwrapper .wrapperspace {
+  padding: 1.5%;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .mainwrapper .wrapperspace {
+    padding: 5%;
+  }
+}
+
+.searchhead {
+  padding-bottom: 15px;
+  font: 400 1.5em Arial;
+}
+
+.searchhead__searchedtxt {
+  color: #000;
+}
+
+.searchtabs {
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 1.4em;
+}
+
+.searchtabs__ulist {
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .searchtabs__ulist {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+}
+
+.searchtabs__listitem {
+  padding: 0 15px;
+}
+.searchtabs__listitem:first-child {
+  padding-left: 0;
+}
+
+.searchtabs__listitem--tabs {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 35px;
+  display: block;
+  position: relative;
+}
+.searchtabs__listitem--tabs:after {
+  content: "";
+  width: 0;
+  border-bottom: 2px solid #19b491;
+  opacity: 0;
+  transition: 0.5s ease;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.searchtabs__listitem--tabs:hover {
+  color: #000;
+}
+.searchtabs__listitem--tabs:hover:after {
+  opacity: 1;
+  width: 100%;
+}
+.searchtabs__listitem--tabs.tab_active {
+  color: #000;
+}
+.searchtabs__listitem--tabs.tab_active:after {
+  opacity: 1;
+  width: 100%;
+}
+
+.boxflex {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 0;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .boxflex {
+    flex-direction: column;
+    padding: 5% 0 0;
+  }
+}
+
+.boxleft {
+  max-width: 67%;
+  width: 720px;
+  padding-right: 30px;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .boxleft {
+    padding: 0;
+    max-width: inherit;
+    width: 100%;
+  }
+}
+.boxleft .columnouter {
+  display: flex;
+  flex-direction: column;
+}
+.boxleft .itembox {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  width: 100%;
+}
+.boxleft .itembox:last-child {
+  border-bottom: 0 none;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .boxleft .itembox {
+    width: 96%;
+  }
+}
+.boxleft .itembox .boximage {
+  width: 64px;
+  margin-right: 3%;
+}
+.boxleft .itembox .boximage.blankimage {
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  height: 64px;
+}
+.boxleft .itembox .boxcontent {
+  font-size: 1.4em;
+  width: 80%;
+  line-height: 16px;
+}
+.boxleft .itembox .boxcontent .author {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+.boxleft .itembox .boxcontent .author__authorexpertise {
+  color: #30bc9c;
+}
+.boxleft .itembox .boxcontent h3 {
+  margin: 5px 0;
+}
+.boxleft .itembox .boxcontent .info {
+  text-overflow: ellipsis;
+  max-width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.boxleft .itembox .boxcontent .timestamp {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.boxleft .itembox .boxcontent .timestamp__username {
+  color: #30bc9c;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .boxleft .itembox.person {
+    display: block;
+  }
+}
+.boxleft .itembox.person .boximage {
+  float: left;
+}
+.boxleft .itembox.person .boximage img {
+  border-radius: 100%;
+}
+.boxleft .itembox.person .address {
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.8);
+}
+.boxleft .itembox.person .boxcontent {
+  width: 40%;
+  padding-right: 10%;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .boxleft .itembox.person .boxcontent {
+    width: 100%;
+    padding: 0;
+  }
+}
+.boxleft .itembox.person .contactinfo {
+  font-size: 1.2em;
+  color: #30bc9c;
+  padding-left: 10%;
+  width: 46%;
+  margin-top: 16px;
+  line-height: 18px;
+}
+@media screen and (max-width: 768px), screen and (orientation: landscape) and (max-width: 1024px) {
+  .boxleft .itembox.person .contactinfo {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .boxleft .itembox.person .contactinfo {
+    width: 100%;
+    padding: 0;
+  }
+}
+.boxleft .itembox.person .contactinfo a {
+  color: #30bc9c;
+}
+
+.boxright {
+  max-width: 33%;
+  width: 360px;
+  padding-left: 30px;
+  border-left: 1px solid #ececec;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+  .boxright {
+    padding: 0;
+    max-width: inherit;
+    width: 100%;
+    border: 0 none;
+  }
+}
+
+.filesblock {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+.filesblock .fileshead {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+.filesblock .filesbox {
+  display: flex;
+  padding: 10px 0 5px;
+}
+.filesblock .filesbox .folderbox {
+  width: 40px;
+  margin-right: 17px;
+}
+.filesblock .filesbox .contentbox {
+  width: 80%;
+  font-size: 1em;
+}
+.filesblock .filesbox .contentbox__texttruncated {
+  overflow: hidden;
+  max-width: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.filesblock .filesbox .contentbox__textinfo {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.filesblock .filesbox .contentbox__textinfo--depart {
+  color: #30bc9c;
+}
+.filesblock .viewall {
+  padding: 15px 0;
+  font-size: 1em;
+}
+.filesblock .viewall--filelinks {
+  color: #30bc9c;
+  display: block;
+}
+
+.phoneicon {
+  background: url(../images/sprite.png) no-repeat -33px 0;
+  width: 13px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mailicon {
+  background: url(../images/sprite.png) no-repeat -53px 0;
+  width: 12px;
+  height: 9px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mobileicon {
+  background: url(../images/sprite.png) no-repeat -71px 0;
+  width: 8px;
+  height: 13px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=styles.css.map */
